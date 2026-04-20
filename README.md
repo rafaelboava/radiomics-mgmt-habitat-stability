@@ -18,6 +18,10 @@ This repository contains the complete pipeline for the non-invasive prediction o
 * **Current Affiliation:** Federal University of São Paulo (**UNIFESP**), Brazil.
 
 ---
+## Study Design and Dataset
+This retrospective study was based on publicly available data from the BraTS 2021 dataset. The dataset comprises multimodal MRI scans of patients with glioblastoma, along with associated clinical and molecular information. Imaging data and tumor segmentations were obtained from Task 1 (tumor segmentation), while MGMT promoter methylation status was obtained from Task 2 (radiogenomic classification).
+
+A data integration step was performed by matching cases across both tasks using unique subject identifiers. Only patients with available MGMT methylation status were included. After this process, a total of 577 patients constituted the final study cohort.
 
 ## Overview
 MGMT methylation is a critical biomarker for predicting response to Temozolomide. This project investigates whether the molecular signature of MGMT is manifested in the microstructural heterogeneity of the **peritumoral edema (FLAIR)** compared to the **tumor core (T1Gd)**.

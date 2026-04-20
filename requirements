@@ -1,8 +1,13 @@
+# MGMT Prediction Pipeline - Environment Dependencies
+# Validated on Python 3.12.13
+
 numpy==2.0.2
 pandas==2.2.2
-scikit-learn==1.6.1
-seaborn==0.13.2
 matplotlib==3.10.0
+seaborn==0.13.2
+scipy==1.16.3
+scikit-learn==1.6.1
 xgboost==3.2.0
-SimpleITK==2.3.1
-pyradiomics @ git+https://github.com/AIM-Harvard/pyradiomics.git@8ed579383b44806651c463d5e691f3b2b57522ab
+joblib==1.5.3
+statsmodels==0.14.6
+session-info==1.0.1

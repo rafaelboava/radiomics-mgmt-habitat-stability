@@ -65,7 +65,7 @@ Stability of the SVM model across the 5-fold cross-validation process.
 
 ### LASSO Feature Importance
 Top 10 radiomic predictors identified by LASSO for both Tumor Core and Peritumoral Edema habitats.
-![LASSO Feature Importance](results/lasso_feature_importance.png)
+![LASSO Feature Importance](results/feature_importance.png)
 
 ### AUC Comparison
 Benchmark of AUC scores across different machine learning algorithms.
@@ -78,7 +78,7 @@ Detailed performance metrics of the best-performing SVM model.
 ---
 
 ## Repository Structure
-* `MGMT_Prediction_Optimized_Pipeline.ipynb`: Main notebook with integrated LASSO selection and benchmarking.
+* `MGMT_Prediction_Pipeline.ipynb`: Main notebook with integrated LASSO selection and benchmarking.
 * `/results`: Contains all performance visualizations and statistical plots.
 
 ## How to Run

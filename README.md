@@ -1,4 +1,4 @@
-# Non-Invasive MGMT Prediction via Peritumoral Radiomics
+# Habitat-Based Radiomics for MGMT Prediction in Glioblastoma
 
 ---
 *Developed as a digital initiative to integrate Artificial Intelligence and predictive molecular modeling into clinical neuroradiology.*
@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Dataset](https://img.shields.io/badge/Dataset-BraTS_2021-orange.svg)](https://www.med.upenn.edu/cbica/brats2021/)
 
-This repository contains the complete pipeline for the non-invasive prediction of **MGMT** promoter methylation in Glioblastomas (GBM), utilizing an optimized machine learning approach focused on habitat radiomics.
+This repository contains reproducible radiomics pipeline focused on habitat-specific analysis and feature stability in radiogenomics.
 
 ---
 
@@ -28,6 +28,11 @@ MGMT methylation is a critical biomarker for predicting response to Temozolomide
 
 By utilizing a cohort of **577 patients** (BraTS 2021), this study employs a leakage-free pipeline to demonstrate that radiomic features provide predictive value across different tumor compartments, supporting the role of the tumor microenvironment in molecular characterization.
 
+Rather than focusing solely on predictive performance, this work emphasizes:
+* Habitat-based analysis (tumor core vs. peritumoral edema)
+* Model robustness and feature stability
+* Methodological rigor and reproducibility in radiomics pipelines
+
 ## Methodology & Rigor
 The pipeline implements:
 * **Feature Selection:** LASSO (L1 Regularization) integrated within the cross-validation loop to identify robust predictors while preventing data leakage.
@@ -47,9 +52,31 @@ The benchmark below displays the performance of each algorithm across the two ha
 | XGBoost | Peritumoral Edema | 0.591 |
 | XGBoost | Tumor Core | 0.584 |
 
-### **Key Scientific Findings**
-1. **Habitat Consistency:** The **DeLong Test ($p = 0.8648$)** indicates no statistically significant difference between the performance of the Tumor Core and Peritumoral Edema. This suggests that MGMT molecular signatures are pervasive throughout the tumor microenvironment.
+## **Key Scientific Findings**
+1. **Habitat Consistency:** The DeLong Test ($p = 0.8648$) indicates no statistically significant difference between the performance of the Tumor Core and Peritumoral Edema. This suggests that MGMT molecular signatures are pervasive throughout the tumor microenvironment.
 2. **Methodological Integrity:** The transition to an integrated feature selection pipeline ensures that metrics reflect realistic generalization, free from the optimistic bias of data leakage.
+
+## **Limitations**
+* No external validation cohort
+* Moderate predictive performance (AUC ~0.62)
+* Lack of multimodal feature integration (e.g., clinical or genomic variables as model inputs)
+
+## Key Contributions
+
+This study differs from most radiomics approaches for MGMT prediction in several key aspects:
+
+* **Habitat-based analysis:**
+  Instead of focusing only on the tumor core, this work systematically compares radiomic features from tumor core and peritumoral edema.
+
+* **Focus on stability, not only performance:**
+  While most studies report AUC alone, this work evaluates model stability across cross-validation folds, providing insight into robustness and reproducibility.
+
+* **Biologically relevant findings:**
+  Results show that peritumoral edema achieves comparable performance but greater stability, suggesting that the tumor microenvironment contains robust radiogenomic information.
+
+* **Methodological rigor:**
+  The pipeline was designed to minimize bias and reduce data leakage, improving the reliability of reported results.
+
 
 ---
 
